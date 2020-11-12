@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "07c5c59f-6885-4a03-8811-8669f44ed93c",
+		"name": "Templates",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SendMailsByCatalogId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CatalogId\": 40496 \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/v1/template",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"v1",
+						"template"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTemplatesByCatalogId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/v1/template/40496",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"v1",
+						"template",
+						"40496"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTemplateByTemplateIdAndCatalogId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/v1/template/40496/d-f2b6b2298a144405a242ac508c5c80b2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"v1",
+						"template",
+						"40496",
+						"d-f2b6b2298a144405a242ac508c5c80b2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
