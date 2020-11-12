@@ -7,7 +7,7 @@ namespace Mailer.Domain.Extensions
     {
         public static IServiceCollection AddApplicationExtensions (this IServiceCollection services) {
 
-            services.AddScoped<ISendMail, SendMail>();
+            services.AddScoped<ITemplateMail, TemplateMail>();
 
             return services;
         }

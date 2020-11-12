@@ -18,6 +18,8 @@ namespace Mailer.Infra.Extensions
         {
             services.AddSingleton(new ConnectionString(_connection));
 
+            services.AddScoped<ITemplateRepository, TemplateRepository>();
+            
             return services;
         }
     }
