@@ -20,14 +20,14 @@ namespace Mailer.Infra.Dapper
             var catalogQuery = string.Empty;
 
             string query = @"select t.FromName,
-                                t.FromAddress,
-                                tvp.PartnerAuthClientSecret as Subscriptionkey,
-                                t.TemplateProviderId as TemplateId,
-                                tt.Description as TemplateType
-                            from tb_template t
+                                    t.FromAddress,
+                                    tvp.PartnerAuthClientSecret as Subscriptionkey,
+                                    t.TemplateProviderId as TemplateId,
+                                    tt.Description as TemplateType
+                             from tb_template t
                                     inner join TB_TemplateVendorProvider tvp on t.TemplateVendorProviderId = tvp.Id
                                     inner join TB_TemplateType tt on t.TemplateTypeId = tt.Id
-                            where ";
+                             where ";
 
             if (!string.IsNullOrEmpty(templateId))
                 templateQuery = string.Format("t.TemplateProviderId = '{0}'", templateId);
