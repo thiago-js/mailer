@@ -5,6 +5,8 @@ namespace Mailer.Domain.Contracts
 {
     public interface ITemplateRepository
     {
-        IEnumerable<Template> GetTemplateByIdAndCatalogId(string templateId, int catalogId);
+        Template GetTemplatesByTemplateIdAndCatalogId(string templateId, int catalogId);
+
+        IEnumerable<Template> GetTemplatesByCatalogId(int catalogId);
     }
 }

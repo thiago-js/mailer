@@ -4,6 +4,10 @@ namespace Mailer.Domain.Models
     {
         public string FromName { get; set; }
         public string FromAddress { get; set; }
-        public string SubscriptionTemplateId { get; set; }
+        public string Subscriptionkey { get; set; }
+
+        public string TemplateId { get; set; }
+
+        public string TemplateType { get; set; }
     }
 }

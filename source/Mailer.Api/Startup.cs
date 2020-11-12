@@ -21,8 +21,7 @@ namespace Mailer.Api
         {
             services.AddControllers();
             services.AddApplicationExtensions();
-            var result = Configuration.GetConnectionString("connection");
-            services.AddDapperExtensions(result);
+            services.AddDapperExtensions(Configuration.GetConnectionString("connection"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
